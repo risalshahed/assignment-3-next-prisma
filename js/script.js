@@ -125,8 +125,44 @@ const changeImage = (src, alt) => {
     myImage.alt = alt;
 }
 
-
-
 // Problem 13
+const changeColor = () => {
+    const colorsAndClasses = [ 'red', 'blue' ];
+
+    colorsAndClasses.forEach(colorAndClass => {
+        const elements = document.querySelectorAll(`.${colorAndClass}`);
+        elements.forEach(element => element.style.color = colorAndClass);
+    })
+}
+
+/* const changeColor = () => {
+    const red = document.querySelectorAll('.red');
+    const red_len = red.length;
+
+    for(let i=0; i<len; i++) {
+        red[i].style.color = 'red';
+    }
+} */
+
 // Problem 14
+const sendGetRequest = () => {
+    axios.get('https://api.example.com/data')
+    .then( res => console.log(res.data) )
+    .catch( err => console.error('Request failed:', err) )
+}
+
+sendGetRequest();
+
 // Problem 15
+const sendPostRequest = () => {
+    const payload = {
+        name: "John Doe",
+        email: "johndoe@example.com"
+    };
+
+    axios.post('https://api.example.com/submit', payload)
+    .then( res => console.log(res.data) )
+    .catch( err => console.error('Request failed:', err) )
+}
+
+sendPostRequest();
