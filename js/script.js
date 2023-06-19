@@ -95,14 +95,38 @@ const showPosition = position => {
     <p>Longitude: <b>${position.coords.longitude.toFixed(2)}</b></p>`
 }
 
-
-
-
 // Problem 8
-// Problem 9
+const clickMe = () => {
+    document.querySelector('#p8').textContent = 'Button Clicked!';
+}
+
+
 // Problem 10
+const addClass = () => {
+    document.querySelector('#p10').classList.add('highlight');
+}
+
+
 // Problem 11
+const createList = () => {
+    const ul = document.querySelector('#p11');
+
+    for(let i=0; i<5; i++) {
+        const li = document.createElement('li');
+        li.textContent = i+1;
+        ul.appendChild(li);
+    }
+}
+
 // Problem 12
+const changeImage = (src, alt) => {
+    const myImage = document.querySelector('#p12');
+    myImage.src = src;
+    myImage.alt = alt;
+}
+
+
+
 // Problem 13
 // Problem 14
 // Problem 15
