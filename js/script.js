@@ -35,8 +35,8 @@ const isPrime = (num) => {
 
 // Problem 4
 function openWindow(url, width, height) {
-  const windowFeatures = `width=${width},height=${height},left=100,top=100`;
-  window.open(url, '_blank', windowFeatures);
+    const windowFeatures = `width=${width},height=${height},left=100,top=100`;
+    window.open(url, '_blank', windowFeatures);
 }
 
 const url_p4 = 'https://example.com';
@@ -69,8 +69,7 @@ const getBrowser = () => {
     }
 
     document.querySelector('#p5').innerHTML = `
-    ${browserName} browser of ${browserVersion} version
-    `
+    ${browserName} browser of ${browserVersion} version`
 }
 
 
@@ -91,8 +90,8 @@ const getLocation = () => {
 
 const showPosition = position => {
     document.querySelector('#p6').innerHTML = `
-    <p>Latitude: <b>${position.coords.latitude.toFixed(2)}</b></p>
-    <p>Longitude: <b>${position.coords.longitude.toFixed(2)}</b></p>`
+    <p>Latitude: <b>${position.coords.latitude}</b></p>
+    <p>Longitude: <b>${position.coords.longitude}</b></p>`
 }
 
 // Problem 8
@@ -139,7 +138,7 @@ const changeColor = () => {
     const red = document.querySelectorAll('.red');
     const red_len = red.length;
 
-    for(let i=0; i<len; i++) {
+    for(let i=0; i<red_len; i++) {
         red[i].style.color = 'red';
     }
 } */
